@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		 <title>Salary prediction</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+        </head>
+		<style>
+		{
+      padding: 0;
+      margin: 0;
+      }
+     .banner::before{
+      background:rgba(0,0,0,.5) url({{ url_for('static', filename='k.jpg') }})  no-repeat center/cover;
+	  background-image: url('k.jpg') no-repeat;
+      content: "";
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      background-position: center center;
+      top:0; 
+      left:0;   
+     }
+    
+
+		.dog{
+		width:400px;
+		height:50px;
+		position:relative;
+		left:550px;
+		margin-top
+		
+		
+		}
+		
+		.nimbu{
+		
+		position:relative;
+		left:600px;
+		margin-top:140px;
+		font-size:40px;
+		color:#00FF33;
+		}
+		.nav3{
+		position:relative;
+		left:550px;
+	   
+		width:400px;
+		height:30px;
+		font-size:20px;
+		margin-top:-250px;
+		color:green;
+		}
+		.jack1{
+		position:relative;
+		left:690px;
+		color:white;
+		
+		
+		
+		}
+		
+		
+
+		
+		</style>
+    <body>
+	<header class="banner">
+        
+    </header>
+        <h1 class="nimbu">Salary Prediction</h1>
+        <form action="{{url_for('predict')}}"method="post" >
+           
+				 
+				  
+				 
+				 
+				 
+				
+				 
+				 <input class="dog"type="text" name="Phone" placeholder="Enter the Experience of the candiate" required="required">
+				 
+				
+				 
+				
+            
+		   
+		   
+			<h1 class="jack1">{{prediction_text}}</h1>
+		     
+     
+		
+		
+		<button class="nav3" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		
+		</form>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        
+    </body>
+</html>
+
+
+
